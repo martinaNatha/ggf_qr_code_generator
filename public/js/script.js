@@ -128,11 +128,15 @@ $("#mail_sub").on("click", function () {
 });
 
 async function send_data(data, type, mail) {
-  var preload = document.getElementById("loader");
+  var loader_15 = document.getElementById("loader-15");
   var resp_msg = document.getElementById("resp_msg");
   var email2 = document.getElementById("email2");
   email2.style.display = "none";
   email2.style.opacity = 0;
+  setTimeout(function () {
+    loader_15.style.display = "flex";
+    loader_15.style.opacity = 1;
+  }, 1000);
   var data_body;
   if (type == "Single") {
     data_body = `[{"sedula":"` + data + `"}]`;
@@ -165,6 +169,8 @@ async function send_data(data, type, mail) {
         "ID NUMBER CODE: " + result.resp;
     } else {
       setTimeout(function () {
+        loader_15.style.display = "none";
+        loader_15.style.opacity = 0;
         resp_msg.style.display = "flex";
         resp_msg.style.opacity = 1;
       }, 1000);
