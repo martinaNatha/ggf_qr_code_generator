@@ -1,0 +1,64 @@
+<section class="content">
+    <div class="bodycontent">
+        <div class="logo_">
+            <img src="/media/guardian_logo_1.png" alt="">
+        </div>
+        <div class="body_cont">
+            <div class="cont">
+                <h1>WELCOME!<BR> </h1>
+                <span class="contt">GET YOUR QR-CODE IN LESS THEN 2 MINUTS</span>
+
+                <div class="control-group">
+                    {{!-- <label>ID Number</label> --}}
+                    <h3>GET SINGLE QR-CODE</h3>
+                    <input id="idnum" type="text" name="idnum" placeholder="ID NUMBER" />
+                    <p id="Errormdg">ID number must be maximum 8 numbers. ID number is invalid</p>
+                </div>
+                <button class="singl_sub" id="singl_sub">
+                    Submit
+                </button>
+                <h3><span id="single_response"></span></h3>
+                <div class="line">
+                    <span>or</span>
+                </div>
+                <h3 style="margin-bottom: 0px;">GET MULTIPLE QR-CODE</h3>
+                {{!-- <span class="contt">Get multiple result by entering an excel sheet</span> --}}
+                <a href="/excel_sheets/template.xlsx" download="excel_template.xlsx">See excel example...</a>
+                <div class="m-content">
+                    <div class="upload-btn-wrapper">
+                        <button class="btn">Upload a file</button>
+                        <input type="file" id="excelwninput">
+                    </div>
+                    <p id="Emessage">The uploaded file is valid!</p>
+                    <button class="singl_sub" id="multi_sub" style="margin-top: 10px;">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="img_content">
+    </div>
+</section>
+
+<div class="loader" id="loader">
+    {{!-- <div class="loader-15" id="loader-15"></div> --}}
+    <div class="response_msg" id="resp_msg">
+        <div class="close_b">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <h4>All qr-code codes has been send via email to your email address</h4>
+    </div>
+    <div class="response_msg2" id="email2">
+        <h4>Enter a valid email address:</h4>
+        <div class="control-group" style="width:100%">
+            {{!-- <label>ID Number</label> --}}
+            {{!-- <h3>GET SINGLE QR-CODE</h3> --}}
+            <input id="mail" type="emial" name="idnum" placeholder="Email ex. @gmail or @outlook" />
+            <p id="Errormdg">ID number must be maximum 8 numbers. ID number is invalid</p>
+        </div>
+        <button class="mail_send" id="mail_sub" style="margin-top: 10px;">
+            Submit
+        </button>
+    </div>
+</div>
