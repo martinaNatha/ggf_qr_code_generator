@@ -161,7 +161,8 @@ async function send_data(data, type, mail) {
         single_response.style.display = "flex";
         single_response.style.opacity = 1;
       }, 1000);
-      document.getElementById("single_response").innerText = "ID NUMBER CODE: "+result.resp
+      document.getElementById("single_response").innerText =
+        "ID NUMBER CODE: " + result.resp;
     } else {
       setTimeout(function () {
         resp_msg.style.display = "flex";
@@ -171,8 +172,11 @@ async function send_data(data, type, mail) {
   }
 }
 
-// $("#loader").on("click", function () {
-//   var preload = document.getElementById("loader");
-//   preload.style.display = "none";
-//   preload.style.opacity = 0;
-// });
+$("#close_b").on("click", function () {
+  var preload = document.getElementById("loader");
+  var resp_msg = document.getElementById("resp_msg");
+  preload.style.display = "none";
+  preload.style.opacity = 0;
+  resp_msg.style.display = "none";
+  resp_msg.style.opacity = 0;
+});

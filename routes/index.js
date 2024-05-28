@@ -9,5 +9,4 @@ router.get("/email", (req, res) => {
   });
 
 
-
 module.exports = router;
