@@ -6,7 +6,7 @@
         <div class="body_cont">
             <div class="cont">
                 <h1>WELCOME!<BR> </h1>
-                <span class="contt">GET YOUR QR-CODE IN LESS THEN 2 MINUTS</span>
+                <span class="contt">GET YOUR QR-CODE CODE IN LESS THEN 2 MINUTS</span>
 
                 <div class="control-group">
                     {{!-- <label>ID Number</label> --}}
@@ -21,7 +21,10 @@
                 <div class="line">
                     <span>or</span>
                 </div>
-                <h3 style="margin-bottom: 0px;">GET MULTIPLE QR-CODE</h3>
+                <div class="multit_cont"id="info_b">
+                    <h3 style="margin-bottom: 0px;margin-top: 0px;">GET MULTIPLE QR-CODE</h3>
+                    <i class="fa-solid fa-info" ></i>
+                </div>
                 {{!-- <span class="contt">Get multiple result by entering an excel sheet</span> --}}
                 <a href="/excel_sheets/template.xlsx" download="excel_template.xlsx">See excel example...</a>
                 <div class="m-content">
@@ -45,7 +48,7 @@
     <div class="loader-15" id="loader-15"></div>
     <div class="response_msg" id="resp_msg">
         <div class="close_b" id="close_b">
-            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-solid fa-circle-xmark" id="info_but"></i>
         </div>
         <h4>All qr-code codes has been send via email to your email address</h4>
     </div>
@@ -62,3 +65,16 @@
         </button>
     </div>
 </div>
+
+
+{{!-- <div class="info_content" id="info_content">
+    <div class="info_cont">
+    <p>Temporarly you can upload 12 or more record at the same time. If you have less than you can add dummy data to the Idnumber column, see example sheet.</p>
+    </div>
+</div> --}}
+
+<div id="customAlert" class="custom-alert">
+    <div class="alert-content">
+      <p>Temporarly you can upload 12 or more record at the same time. If you have less than you can add dummy data to the Idnumber column, see example sheet.</p>
+    </div>
+  </div>

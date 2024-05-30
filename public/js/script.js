@@ -186,3 +186,24 @@ $("#close_b").on("click", function () {
   resp_msg.style.display = "none";
   resp_msg.style.opacity = 0;
 });
+
+const alertButton = document.getElementById("info_b");
+  const customAlert = document.getElementById("customAlert");
+  const closeBtn = document.querySelector(".close-btn");
+
+  alertButton.addEventListener("mouseenter", function() {
+    customAlert.style.display = "flex"; // Show the alert box
+    setTimeout(() => {
+      customAlert.classList.add("show"); // Trigger the slide-down effect
+    }, 10); // Slight delay to trigger the transition
+  });
+
+  // Optionally, hide the alert box when clicking outside of it
+  window.addEventListener("click", function(event) {
+    if (event.target === customAlert) {
+      customAlert.classList.remove("show");
+      setTimeout(() => {
+        customAlert.style.display = "none";
+      }, 300);
+    }
+  });
