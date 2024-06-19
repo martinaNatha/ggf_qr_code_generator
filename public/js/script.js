@@ -192,13 +192,12 @@ const alertButton = document.getElementById("info_b");
   const closeBtn = document.querySelector(".close-btn");
 
   alertButton.addEventListener("mouseenter", function() {
-    customAlert.style.display = "flex"; // Show the alert box
+    customAlert.style.display = "flex";
     setTimeout(() => {
-      customAlert.classList.add("show"); // Trigger the slide-down effect
-    }, 10); // Slight delay to trigger the transition
+      customAlert.classList.add("show"); 
+    }, 10);
   });
 
-  // Optionally, hide the alert box when clicking outside of it
   window.addEventListener("click", function(event) {
     if (event.target === customAlert) {
       customAlert.classList.remove("show");
