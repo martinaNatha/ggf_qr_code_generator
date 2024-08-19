@@ -173,7 +173,7 @@ app.post("/get_qr_code", async (req, res) => {
 
 function send_email(resp, res, type, amount, mail) {
   let mailOption_client = {
-    from: `Nathaniel Martina nathaniel.martina@myguardiangroup.com`,
+    from: `GGF Internal <ggf_internal@myguardiangroup.com>`,
     to: mail,
     subject: "Qr-Code code",
     body: resp,
@@ -503,13 +503,16 @@ function send_email(resp, res, type, amount, mail) {
 
   //send email to client
   let transporter_client = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: "smtp.sendgrid.net",
     port: 587,
-    secure: false, 
+    secure: false,
     auth: {
-      user: "nathaniel.martina.official@gmail.com",
-      pass: "eqfd pzuc bfmw zqqu",
-    }
+      user: "apikey",
+      pass: process.env.EMAIL_P,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
   });
 
   transporter_client.sendMail(mailOption_client, function (error, info) {
